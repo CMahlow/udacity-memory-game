@@ -59,4 +59,20 @@ $('.restart').on('click', restart);
 // Reset the game
 function restart() {
   location.reload();
+
+  // Start the Game function
+function startGame(){
+  let newCards = shuffle(cards);
+  let deck = $('.deck');
+  $('.card').remove();
+  for (let i = 0; i < 16; i++){
+    deck[0].innerHTML+= '<li class="card"></li>';
+  }
+  let list = $('.card');
+  for (let i = 0; i < 16; i++){
+    list[i].innerHTML += '<i class="fa fa-' + newCards[i] + '"></i>';
+  }
+  clickCard();
+}
+
 }
