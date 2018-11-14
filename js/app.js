@@ -74,5 +74,12 @@ function startGame(){
   }
   clickCard();
 }
+//Add Clock function
+function startClock(){
+  timer = setInterval(function() {
+    clock++;
+    $('.timer').text(clock + ' seconds');
+  }, 1000);
+}
 
 }
