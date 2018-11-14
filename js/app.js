@@ -54,3 +54,9 @@ $(document).ready(function() {
  });
 
 $('.restart').on('click', restart);
+
+
+// Reset the game
+function restart() {
+  location.reload();
+}
