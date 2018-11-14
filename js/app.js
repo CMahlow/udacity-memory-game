@@ -1,7 +1,10 @@
 /*
  * Create a list that holds all of your cards
  */
-
+ let cards = ['diamond', 'paper-plane-o', 'anchor',
+ 'bolt','cube', 'leaf', 'bicycle','bomb','diamond',
+ 'paper-plane-o', 'anchor', 'bolt','cube', 'leaf',
+ 'bicycle','bomb'];
 
 /*
  * Display the cards on the page
