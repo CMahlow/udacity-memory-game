@@ -118,3 +118,15 @@ if (openCards.length == 16){
   winMSG();
 
 }
+};
+
+// SweetAlert https://sweetalert.js.org/guides/ 
+function winMSG() {
+  let exactMove = moves/2;
+  let stars = $(".fa-star").length;
+  swal({
+    title: "Congrats, You just won!",
+    text: "You got " + stars + " stars with " + exactMove + " moves, after " + clock + " seconds!",
+    icon: "success",
+    buttons: ["I'm done", "Play again"],
+  })
