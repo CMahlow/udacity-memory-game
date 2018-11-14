@@ -120,7 +120,7 @@ if (openCards.length == 16){
 }
 };
 
-// SweetAlert https://sweetalert.js.org/guides/ 
+// SweetAlert https://sweetalert.js.org/guides/
 function winMSG() {
   let exactMove = moves/2;
   let stars = $(".fa-star").length;
@@ -130,3 +130,11 @@ function winMSG() {
     icon: "success",
     buttons: ["I'm done", "Play again"],
   })
+  .then ((playAgain) => {
+      if (playAgain) {
+        location.reload();
+      } else {
+        return;
+      }
+    });
+      
