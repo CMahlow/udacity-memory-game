@@ -81,5 +81,22 @@ function startClock(){
     $('.timer').text(clock + ' seconds');
   }, 1000);
 }
+// Click function and match the card
+function clickCard() {
+  $('.card').click(function(){
+    if (!$(this).hasClass('match') || $(this).hasClass('open')){
+      $(this).addClass('open show');
+      moves++;
+      if (moves ==1){
+        startClock();
+      }
+    openCards.push($(this));
+    if (openCards.length % 2 == 0) {
+      setTimeout(compareCards, 300);
+    }
+    }
+    totalMoves(moves);
+  });
+}
 
 }
