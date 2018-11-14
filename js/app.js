@@ -6,6 +6,14 @@
  'paper-plane-o', 'anchor', 'bolt','cube', 'leaf',
  'bicycle','bomb'];
 
+ // Add global variables
+ let moves = 0;
+ let clock = 0;
+ let stars = 3;
+ let timer;
+ let timeCounter = 0;
+ let openCards = [];
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
