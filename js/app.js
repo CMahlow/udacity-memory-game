@@ -137,4 +137,26 @@ function winMSG() {
         return;
       }
     });
-      
+  }
+
+//Add Function for moves and stars
+function totalMoves(move){
+stars = $('.fa-star');
+noStars = $('.fa-star-0');
+if (moves % 2 == 0){
+let exactMove = move/2;
+$('.moves').text(exactMove + ' moves');
+}
+if (moves == 0){
+for (i = 0; i < noStars.length; i++){
+  noStars[i].classList.add('fa-star');
+  noStars[i].classList.remove('fa-star-o');
+}
+} else if (moves == 32){
+stars[2].classList.add('fa-star-o');
+stars[2].classList.remove('fa-star');
+} else if (moves == 48) {
+stars[1].classList.add('fa-star-o');
+stars[1].classList.remove('fa-star');
+}
+}
