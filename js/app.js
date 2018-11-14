@@ -98,5 +98,23 @@ function clickCard() {
     totalMoves(moves);
   });
 }
+//Check if two selected card match
+function compareCards(){
+  if (openCards[openCards.length - 2].html() == openCards[openCards.length - 1].html()) {
+    openCards[openCards.length - 2].removeClass('open show');
+    openCards[openCards.length - 2].addClass('match');
+    openCards[openCards.length - 1].removeClass('open show');
+    openCards[openCards.length - 1].addClass('match');
+
+  } else {
+    openCards[openCards.length - 1].removeClass('open show');
+    openCards[openCards.length  -2].removeClass('open show');
+    openCards.pop();
+    openCards.pop();
+  }
+if (openCards.length == 16){
+  finalTime = timer.innerHTML;
+  clearInterval(timer);
+  winMSG();
 
 }
